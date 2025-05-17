@@ -245,5 +245,19 @@ function prevSlide() {
 showSlide(currentSlide);
 </script>
 
+  <script>
+  function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+  const nama = getParameterByName('nama');
+  if (nama) {
+    const elem = document.getElementById('nama-tamu');
+    if(elem) {
+      elem.textContent = decodeURIComponent(nama);
+    }
+  }
+</script>
+  
 </body>
 </html>
